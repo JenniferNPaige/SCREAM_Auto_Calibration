@@ -17,7 +17,8 @@ publication.
 | `evaluation_simulations/` | 35-day simulation pickles (time series, monthly means, obs) | Sec. 6.1 |
 | `observations/masks/` | Observational-coverage masks | Sec. 3.2 |
 | `observations/regions.nc` | Zonal/regional/global area definitions | Table 3 |
-| `observations/dy1/`, `dy2/`, `era5/` | Regridded observational fields (redistribution rights vary by source) | Table 2 |
+| `observations/dy1/`, `dy2/` | MAC TLWP files (included); IMERG and CERES files must be downloaded separately | Table 2 |
+| `observations/era5/` | ERA5 fields — must be downloaded separately | Table 2 |
 
 Full contents and usage instructions: [data_Zenodo/DATA.md](data_Zenodo/DATA.md).
 
