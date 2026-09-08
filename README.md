@@ -66,7 +66,7 @@ Data is split across a Zenodo deposit (derived artifacts, DOI forthcoming) and a
 
 ## Citation
 
-> Paige, J., Caldwell, P., Beydoun, H., Hannah, W., Rebassoo, F., Mahfouz, N., Keen, N., Elsaesser, G. S., Bertagna, L., Bogenschutz, P., Collins, G., Donahue, A., Golaz, J.-C., Guba, O., Hillman, B., Lee, J., Lin, W., Ma, H.-Y., Salinger, A., Shand, L., Terai, C., & Wagman, B. Machine Learning for Optimized Tuning of the Simple Cloud-Resolving Earth Atmosphere Model (SCREAM). *Journal of Advances in Modeling Earth Systems (JAMES)*, in review.
+> Paige, J., Caldwell, P., Beydoun, H., Hannah, W., Rebassoo, F., Mahfouz, N., Keen, N., Elsaesser, G. S., Bertagna, L., Bogenschutz, P., Collins, G., Donahue, A., Golaz, J.-C., Guba, O., Hillman, B., Lee, J., Lin, W., Ma, H.-Y., Salinger, A., Shand, L., Terai, C., & Wagman, B. Machine Learning for Optimized Tuning of the Simple Cloud-Resolving E3SM Atmosphere Model (SCREAM). *Journal of Advances in Modeling Earth Systems (JAMES)*, in review.
 
 See [CITATION.cff](CITATION.cff) for machine-readable citation metadata.
 
