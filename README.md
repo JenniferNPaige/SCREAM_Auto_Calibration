@@ -1,6 +1,6 @@
 # SCREAM_Autotuning
 
-Code accompanying **"Machine Learning for Optimized Tuning of the Simple Cloud-Resolving Earth Atmosphere Model (SCREAM)"** (Paige et al., submitted to *Journal of Advances in Modeling Earth Systems*).
+Code accompanying **"Machine Learning for Optimized Tuning of the Simple Cloud-Resolving E3SM Atmosphere Model (SCREAM)"** (Paige et al., submitted to *Journal of Advances in Modeling Earth Systems*).
 
 ## Summary
 
