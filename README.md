@@ -1,12 +1,12 @@
-# SCREAM_Autotuning
+# SCREAM_Auto_Calibration
 
-Code accompanying **"Machine Learning for Optimized Tuning of the Simple Cloud-Resolving Earth Atmosphere Model (SCREAM)"** (Paige et al., submitted to *Journal of Advances in Modeling Earth Systems*).
+Code accompanying **"Machine Learning for Optimized Tuning of the Simple Cloud-Resolving E3SM Atmosphere Model (SCREAM)"** (Paige et al., submitted to *Journal of Advances in Modeling Earth Systems*).
 
 ## Summary
 
 Global storm-resolving models (GSRMs) like SCREAM are too computationally expensive to tune by hand or with long simulations. This repository implements an automated tuning framework for SCREAM:
 
-1. An ensemble of 2-day simulations was used for the automated tuning of a global storm resolving model.
+1. An ensemble of 2-day simulations was used for the automated calibration of a global storm resolving model.
 2. A Gaussian process surrogate outperformed convolutional neural network and random forest surrogates in predicting Earth system model responses to parameter perturbations, when trained under the data-limited conditions characteristic of high resolution autotuning.
 3. In 2-day validation simulations, runs with optimized parameters showed marked improvement relative to the default tuning—specifically reducing a known midlevel dry bias and producing more realistic cloud properties while maintaining a similar radiative balance; dry bias improvements remain in 35-day simulations while other improvements degrade.
 
@@ -66,7 +66,7 @@ Data is split across a Zenodo deposit (derived artifacts, DOI forthcoming) and a
 
 ## Citation
 
-> Paige, J., Caldwell, P., Beydoun, H., Hannah, W., Rebassoo, F., Mahfouz, N., Keen, N., Elsaesser, G. S., Bertagna, L., Bogenschutz, P., Collins, G., Donahue, A., Golaz, J.-C., Guba, O., Hillman, B., Lee, J., Lin, W., Ma, H.-Y., Salinger, A., Shand, L., Terai, C., & Wagman, B. Machine Learning for Optimized Tuning of the Simple Cloud-Resolving Earth Atmosphere Model (SCREAM). *Journal of Advances in Modeling Earth Systems (JAMES)*, in review.
+> Paige, J., Caldwell, P., Beydoun, H., Hannah, W., Rebassoo, F., Mahfouz, N., Keen, N., Elsaesser, G. S., Bertagna, L., Bogenschutz, P., Collins, G., Donahue, A., Golaz, J.-C., Guba, O., Hillman, B., Lee, J., Lin, W., Ma, H.-Y., Salinger, A., Shand, L., Terai, C., & Wagman, B. Machine Learning for Optimized Tuning of the Simple Cloud-Resolving E3SM Atmosphere Model (SCREAM). *Journal of Advances in Modeling Earth Systems (JAMES)*, in review.
 
 See [CITATION.cff](CITATION.cff) for machine-readable citation metadata.
 
