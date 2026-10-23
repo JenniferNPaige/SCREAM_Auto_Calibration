@@ -18,6 +18,7 @@ Global storm-resolving models (GSRMs) such as SCREAM are too computationally exp
 03_optimization/            Optimize parameters using the GP surrogate (Sec. 5)
 03_optimization/cost_functions/   Cost-function weighting definitions
 04_simulation_evaluation/   Evaluate optimized vs. default simulations (Sec. 6, App. B)
+data_HPSS/readme            Index of raw simulation output on NERSC HPSS
 paths.py                    Central data-path configuration (see DATA.md)
 environment.yml             Conda environment
 environment_mapping.yml     Conda environment used in evaluation mapping
@@ -25,25 +26,27 @@ environment_mapping.yml     Conda environment used in evaluation mapping
 
 ### 01_data_preprocessing
 - `Preprocessing.ipynb` — loads raw PPE output (153 members × DY1/DY2) and observations (IMERG, CERES-SYN, MAC), masks to observational coverage, computes area-weighted ZRG statistics, and writes the pickled training tables used throughout the pipeline. Produces the PPE spread plots (Fig. 2) and correlation heatmaps (Fig. 3).
-- `Plot-global-regional-zonal-timeseries.ipynb` — creates timeseries plots of PPE data
+- `plot-global-regional-zonal-timeseries.ipynb` — creates timeseries plots of PPE data
 
 ### 02_surrogate_modeling
-- `Final_Surrogate_Kfolds_masked.ipynb` — interactive surrogate evaluation notebook, includes PPE correlational analyses.
-- `Final_surrogate_Kfolds_masked_10seeds_rawr2.py` — GP, CNN, RF, MLR, and spline surrogates with 5-fold CV × 10 seeds; reports mean ± std R² and RMSE (Figs. 4–5).
-- `GP_Kfold_subsetting_10seed_rawr2.py` — R² vs. training-set size (Fig. 6).
-- `GP_gridcell_kfolds_masked_10seeds_rawr2.py` — ZRG vs. native-grid GP comparison (Tables A1–A2).
-- `GP_kernel_comparison_Kfolds_masked_10seeds_rawr2.py` — GP kernel comparison (Table A3).
+- `Final_Surrogate_Kfolds_masked_viz.ipynb` — interactive surrogate evaluation notebook, includes PPE correlational analyses.
+- `Final_surrogate_Kfolds_masked_10seeds_rawr2.py` — GP, CNN, RF, MLR, and spline surrogates with 5-fold CV × 10 seeds; reports mean ± std R² and RMSE (Figs. 4–5). Results plotted in `surrogate_kfolds_viz.ipynb`.
+- `GP_Kfold_subsetting_10seed_rawr2.py` — R² vs. training-set size (Fig. 6). Results plotted in `GP_subset_compare_viz.ipynb`.
+- `GP_gridcell_kfolds_masked_10seeds_rawr2.py` — ZRG vs. native-grid GP comparison (Tables A1–A2). Results shown in `GP_gridcell_kfolds_viz.ipynb`.
+- `GP_kernel_comparison_Kfolds_masked_10seeds_rawr2.py` — GP kernel comparison (Table A3). Results shown in `GP_kernel_compare_viz.ipynb`.
 - `spline_knot_degree_search_10seed_rawr2.py` — spline hyperparameter search (Table A4).
 
 ### 03_optimization
 - `Final_Surrogate_Optimizing_Visualizing.ipynb` — trains the final GP surrogate on the full PPE and optimizes via `basinhopping` (100 starts × 5 iterations); produces the optimization barcode plot (Fig. 7) and cost-function comparison (Fig. 8).
 - `run_GPsurrogate_fromsave_final_efficient.py` / `run_GPsurrogate_fromsave_efficient.sh` — HPC script and launcher for running the optimization from saved training data.
-- `cost_functions/` — four cost-function weightings compared in Fig. 8: `standard_cost_fun.py`, `precip_cost_fun.py`, `no_region_cost_fun.py`, `tropics_weighted_cost_fun.py`.
+- `cost_functions/` — four cost-function weightings compared in Fig. 8: `standard_cost_fun.py`, `precip_cost_fun.py`, `no_region_cost_fun.py`, `tropics_weighted_cost_fun.py`. `precip4_cost_fun.py` is an additional variant with heavier precipitation weighting (PCP = 4/7).
 
 ### 04_simulation_evaluation
 - `Compare_visualize_new_simulations.ipynb` — geographic and ZRG bias plots (Figs. 9–14, App. B1) for the tuned variables (PCP, TLWP, OSR, OLR).
 - `Validation_of_other_variables.ipynb` — validation of untuned variables (WVP, IWP, T200/T850, U200/U850 vs. ERA5; Figs. 15–16, 19, App. B2–B3) and day-2 vs. monthly correlation analysis.
 - `40daysim_visualization.ipynb` — time series (Fig. 17) and monthly bias analysis (Fig. 18, App. B4) for the 35-day DYAMOND2 simulation.
+- `Convection_investigation.ipynb` — rain-object size distributions for default vs. optimized 2-day runs compared against GPM IMERG.
+- `Curtain_plots.ipynb` — vertical (pressure-level) comparisons of optimized runs against ERA5 (e.g. water vapor, RH, winds, cloud cover).
 
 ## Installation
 
